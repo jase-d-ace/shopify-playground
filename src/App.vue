@@ -1,14 +1,16 @@
 <script>
+import Nav from "@/components/Nav.vue";
 
 export default {
   name: 'App',
+  components: {
+      Nav
+  }
 }
 </script>
 
 <template>
-    <router-link to="/">Home</router-link>
-    <router-link to="/cart">Cart</router-link>
-    <router-link to="/products">Products</router-link>
+    <Nav />
     <router-view />
 </template>
 
