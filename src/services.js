@@ -1,0 +1,2 @@
+export const SHOPIFY_CLIENT_ID="44fa769fd8f636bf403706a53f0f2b91"
+export const SHOPIFY_API_SECRET="b07ec6cf069a2033c538d14b7312edda"
