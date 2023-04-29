@@ -15,6 +15,23 @@ export const getShopifyToken = async (code) => {
 
     const req = await fetch(`https://cors-anywhere.herokuapp.com/https://${process.env.SHOPIFY_STORE_NAME}/admin/oauth/access_token`, options)
 
-    const res = await req.json();
-    return res.access_token
+    return await req.json();
 };
+
+export const populateProducts = async (json, token) => {
+    const products = json.products;
+    const productMap = products.map(product => ({"product": product}));
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origins": "*",
+            "X-Shopify-Access-Token": token
+        },
+        body: JSON.stringify({products: productMap})
+    };
+
+    const req = await fetch(`https://cors-anywhere.herokuapp.com/https://${process.env.SHOPIFY_STORE_NAME}/admin/api/2023-04/products.json`, options);
+
+    return await req.json();
+}
