@@ -13,17 +13,22 @@ const routes = [
     {
         path: "/products",
         name: "products",
-        component: ProductsIndex
+        component: ProductsIndex,
     },
     {
         path: "/cart",
         name: "cart",
-        component: Cart
+        component: Cart,
     },
     {
         path: "/product/:id",
         name: "product-detail",
-        component: ProductDetail
+        component: ProductDetail,
+    },
+    {
+        path: "/logged_in",
+        name: "logged-in",
+        component: Home,
     },
 ];
 
