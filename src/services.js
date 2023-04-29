@@ -1,5 +1,4 @@
-
-export const getShopifyToken = async (code, callback) => {
+export const getShopifyToken = async (code) => {
     const options = {
         method: "POST",
         mode: "cors",
@@ -17,5 +16,5 @@ export const getShopifyToken = async (code, callback) => {
     const req = await fetch(`https://cors-anywhere.herokuapp.com/https://${process.env.SHOPIFY_STORE_NAME}/admin/oauth/access_token`, options)
 
     const res = await req.json();
-    return callback(res.access_token)
+    return res.access_token
 };
