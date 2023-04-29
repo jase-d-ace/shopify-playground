@@ -1,24 +1,7 @@
-# jases-guitar-store-frontend
+# Jase's Guitar Front End Shopify Stuff
 
-## Project setup
-```
-npm install
-```
+## What??
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* Stuff and things and stuff and things
+* Vue Front End
+* Shopify stuff
