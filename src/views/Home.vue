@@ -1,21 +1,19 @@
 <script>
     export default {
-        name: "ProductsIndex",
+        name: "Home",
         data() {
             return {
-                stuff: "things"
-            }
-        }
-    };
+                stuff: "things",
+            };
+        },
+    }
 </script>
 
 <template>
     <div class="some-class">
         <h1>
-            Products!
+            Home!
         </h1>
     </div>
 </template>
 
-<style lang="scss">
-</style>

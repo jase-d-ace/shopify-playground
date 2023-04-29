@@ -1,17 +1,14 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import App from "@/App.vue";
+import * as VueRouter from "vue-router";
+import Home from "@/views/Home.vue";
 import Cart from "@/views/Cart.vue";
 import ProductsIndex from "@/views/ProductsIndex.vue";
 import ProductDetail from "@/views/ProductDetail.vue";
-
-Vue.use(VueRouter);
 
 const routes = [
     {
         path: "/",
         name: "home",
-        component: App,
+        component: Home,
     },
     {
         path: "/products",
@@ -30,11 +27,10 @@ const routes = [
     },
 ];
 
-const router = new VueRouter({
-    mode: "history",
-    base: process.env.BASE_URL,
-    routes
-});
+const router = VueRouter.createRouter({
+    history: VueRouter.createWebHistory(),
+    routes,
+})
 
 export default router;
 

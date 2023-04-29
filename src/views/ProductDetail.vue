@@ -17,8 +17,5 @@
     </div>
 </template>
 
-<style>
-    .some-class {
-        color: chartreuse;
-    }
+<style lang="scss">
 </style>
