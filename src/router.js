@@ -25,11 +25,6 @@ const routes = [
         name: "product-detail",
         component: ProductDetail,
     },
-    {
-        path: "/logged_in",
-        name: "logged-in",
-        component: Home,
-    },
 ];
 
 const router = VueRouter.createRouter({

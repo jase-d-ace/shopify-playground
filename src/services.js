@@ -1,2 +1,21 @@
-export const SHOPIFY_CLIENT_ID="44fa769fd8f636bf403706a53f0f2b91"
-export const SHOPIFY_API_SECRET="b07ec6cf069a2033c538d14b7312edda"
+
+export const getShopifyToken = async (code, callback) => {
+    const options = {
+        method: "POST",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+            client_id: process.env.SHOPIFY_CLIENT_ID,
+            client_secret: process.env.SHOPIFY_CLIENT_SECRET,
+            code
+        })
+    };
+
+    const req = await fetch(`https://cors-anywhere.herokuapp.com/https://${process.env.SHOPIFY_STORE_NAME}/admin/oauth/access_token`, options)
+
+    const res = await req.json();
+    return callback(res.access_token)
+};

@@ -1,10 +1,15 @@
 <script>
+    import { getShopifyToken } from "@/services.js";
     export default {
         name: "ProductsIndex",
         data() {
             return {
-                stuff: "things"
+                stuff: "things",
+                token: null,
             }
+        },
+        mounted() {
+            getShopifyToken(this.$route.query.code, (res) => {this.token = res})
         }
     };
 </script>
